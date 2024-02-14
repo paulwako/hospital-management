@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'laboratory.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <p>If operation cannot proceed use the quick navigation buttons below</p>
+      <a href="{{'lab'}}"><button>Back</button></a>
+      <a href="{{'logout'}}"><button>Discard</button></a>
+      <form action="pharmacy" method="">
+        <p>Patient ID:</p>
+        <input type="number" value="{{user.id}}" />
+        <p>Patient Name</p>
+        <input type="text" value="{{user.username}}" />
+        <p>Prescription details:</p>
+        <textarea
+          name="prescription"
+          id="prescription"
+          cols="30"
+          rows="10"
+          placeholder="recommended patient medicine"
+        ></textarea>
+        <p>Available medicine:</p>
+        <textarea
+          name="availableMedicine"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="write avilable medicine and thier prices in this area"
+        ></textarea>
+        <p>Out of stock:</p>
+        <textarea
+          name="outOfStock"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="please enter the madicine that is not avilable in stock"
+        ></textarea
+        ><br />
+        <button>Next</button>
+      </form>
+      <a href="{{'lab'}}"><button>Back</button></a>
+      <a href="{{'logout'}}"><button>Discard</button></a>
+    </main>
+  </body>
+</html>

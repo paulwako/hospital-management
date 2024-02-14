@@ -1,0 +1,34 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'index.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <style>
+        h4 {
+          color: red;
+        }
+      </style>
+      {% for message in messages%}
+      <h4>{{message}}</h4>
+      {% endfor %}
+      <h2>Take necessary basic tests:</h2>
+      <form method="post" action="condition">
+        {%csrf_token%}
+        <output>weight:</output>
+        <input type="text" id="weight" name="weight" /><br />
+        <output>BloodPressure:</output>
+        <input type="text" id="bp" name="bp" /><br />
+        <output>HIV:</output>
+        <input type="text" id="hiv" name="hiv" /><br />
+        <button>Next</button>
+      </form>
+      <a href="{{'logout'}}"><button>Back</button></a>
+    </main>
+  </body>
+</html>

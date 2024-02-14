@@ -1,0 +1,11 @@
+.residence,.name,.identification,.contact,.insuarance{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+output{
+    margin-bottom: 5px;
+}
+h4{
+    color: red;
+}

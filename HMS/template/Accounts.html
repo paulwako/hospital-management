@@ -1,0 +1,57 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'style.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <p>use the navigation buttons below if the operation cannot proceed</p>
+      <a href="{{'pharmacy'}}"><button>Back</button></a>    
+     <a href="{{'Logout'}}"><button>Logout</button></a>
+     <form action="accounts" method="get">
+      <p>Date:</p>
+      <input type="datetime" name="date" id="date" value="">
+      <p>Patient ID:</p>
+      <input type="number" name="" id="" value="{{user.id}}" />
+      <p>Patient Name:</p>
+      <input type="text" name="" id="" value="{{user.username}}" />
+      <div>
+        <nav>
+          payment mode:
+          <nav> Mpesa |CreditCard| PersonalInsuarance| NHIF| Cash| BondTerms </nav>
+        </nav>
+        <input type="text" value="">
+        <p>Billing process:</p>
+        <table id="table">
+          <th>Registration Fee</th>
+          <th>Consulattion Fee</th>
+          <th>Laboratory test Fee</th>
+          <th>Pharmacy charge Fee</th>
+          
+          <tr>
+            <td >{{cost.registration}}</td>
+            <td >{{cost.consultation}}</td>
+            <td >{{cost.lab}}</td>
+            <td >{{cost.pharmacy}}</td>
+          </tr>
+          
+        </table>
+        <output>Total cost:</output>
+        <output name="total"></output>
+        <p>Transction ID:</p>
+        <input type="text" name="" id="" /><br />
+        <button>Process receipt</button>
+        <button>Suspend Transction</button>
+        
+     </form>
+      </div>
+      <a href="{{'pharmacy'}}"><button>Back</button></a>    
+     <a href="{{'Logout'}}"><button>Logout</button></a>
+    </main>
+    
+  </body>
+</html>

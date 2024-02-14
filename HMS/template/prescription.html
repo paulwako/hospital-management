@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'laboratory.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Prescription card</h1>
+      <form action="prescription" method="get">
+        <p>Patient ID:</p>
+        <input
+          type="number"
+          name="patient-id"
+          id="patient-id"
+          value="{{user.id}}"
+        />
+        <textarea
+          name="prescription"
+          id="prescription"
+          cols="30"
+          rows="10"
+          placeholder="medicine recommendations are made here"
+        ></textarea>
+        <textarea
+          name="test-results"
+          id="test-results"
+          cols="30"
+          rows="10"
+          placeholder="test results appear hear"
+        ></textarea>
+
+        <button>Next</button>
+      </form>
+    </main>
+  </body>
+</html>

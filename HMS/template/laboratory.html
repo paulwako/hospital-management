@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'laboratory.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <p>If operation cannot proceed use the quick navigation button</p>
+        <a href="{{'consultation'}}"><button>Back</button></a>
+        <a href="{{'logout'}}"><button>Discard</button></a>
+        <form action="lab" method="post">
+          {%csrf_token%}
+          <h1>The test result sheet:</h1>
+          <p>Patient ID:</p>
+          <input type="number" name="patient" value="{{user.id}}" /><br />
+          <p>Patient Name:</p>
+          <input
+            type="text"
+            name="patientName"
+            value="{{user.username}}"
+          /><br />
+          <textarea
+            name="recomendation"
+            id="recommendation"
+            cols="30"
+            rows="10"
+            placeholder="recommended tests by the physcician"
+          ></textarea>
+          <textarea
+            name="result"
+            id="result"
+            cols="30"
+            rows="10"
+            placeholder="test results"
+          ></textarea
+          ><br />
+          <button>Next</button>
+        </form>
+        <a href="{{'consultation'}}"><button>Back</button></a>
+        <a href="{{'logout'}}"><button>Discard</button></a>
+      </div>
+    </main>
+  </body>
+</html>

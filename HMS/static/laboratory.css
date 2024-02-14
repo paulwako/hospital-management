@@ -1,0 +1,27 @@
+body{
+    background-color: lightblue;
+}
+main{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: 5px;
+    padding: 3%;
+    background-color: hsl(0,0%,100%);
+}
+button{
+    background-color: darkblue;
+    color: white;
+    margin: 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    width: 50px;
+}
+input{
+    margin: auto;
+}
+textarea{
+    width: 100%;
+    margin-top: 10px;
+}

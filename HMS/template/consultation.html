@@ -1,0 +1,32 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'index.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <button onclick="room()">Room</button>
+      <h3>Now proceed to room:</h3>
+      <form action="lab" method="GET">
+        <p>patientID:{{user.id}}</p>
+        <p>RoomNo: <span name="room" id="room"></span></p>
+        <textarea
+          name="physcician-recomendation"
+          id="physcician-recomendation"
+          cols="30"
+          rows="10"
+          placeholder="what you recommend to the patient"
+        ></textarea
+        ><br />
+        <input type="submit" />
+      </form>
+      <a href="{{'condition'}}"><button>Back</button></a>
+      <a href="{{'logout'}}"><button>Discard</button></a>
+    </main>
+    <script src="{% static 'index.js'%}"></script>
+  </body>
+</html>

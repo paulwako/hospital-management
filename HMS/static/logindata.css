@@ -1,0 +1,13 @@
+#btn{
+    background-color: darkblue;
+    color: white;
+    margin: 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    width: 50px;
+}
+#label0,#label1,#password,#username{
+    margin-bottom: 10px;
+    padding: 5px;
+}

@@ -1,0 +1,35 @@
+body{
+    background-color: lightblue;
+}
+main{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: 5px;
+    padding: 3%;
+    background-color: hsl(0,0%,100%);
+}
+button{
+    background-color: darkblue;
+    color: white;
+    margin: 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    width: 50px;
+}
+input,output{
+    margin:0px 4px 4px 4px;
+}
+#weight{
+    margin-left: 90px;
+}
+#bp{
+    margin-left: 40px; 
+}
+#hiv{
+    margin-left: 105px;
+}
+#physcician-recomendation{
+    width: 100%;
+}

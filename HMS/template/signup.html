@@ -1,0 +1,31 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{%static 'laboratory.css'%}" />
+    <link rel="stylesheet" href="{%static 'signup.css'%}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h2>Registration</h2>
+        {% for message in messages %}
+        <h4>{{message}}</h4>
+        {% endfor %}
+        <form method="post" action="signup">
+          {%csrf_token%}
+          <p>Username:</p>
+          <input type="text" name="username" id="username" />
+          <p>Password:</p>
+          <input type="password" name="password" id="password" />
+          <p>Confirm password</p>
+          <input type="password" name="password1" id="password1" /><br />
+          <input type="submit" name="btn" id="btn" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
